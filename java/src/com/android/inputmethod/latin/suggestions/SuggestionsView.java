@@ -81,11 +81,11 @@ public class SuggestionsView extends RelativeLayout implements OnClickListener,
 
     static final boolean DBG = LatinImeLogger.sDBG;
 
-    private final ViewGroup mSuggestionsStrip;
+    public final ViewGroup mSuggestionsStrip;
     private KeyboardView mKeyboardView;
 
     private final View mMoreSuggestionsContainer;
-    private final MoreSuggestionsView mMoreSuggestionsView;
+    public final MoreSuggestionsView mMoreSuggestionsView;
     private final MoreSuggestions.Builder mMoreSuggestionsBuilder;
     private final PopupWindow mMoreSuggestionsWindow;
 
@@ -619,7 +619,6 @@ public class SuggestionsView extends RelativeLayout implements OnClickListener,
         mPreviewPopup.setBackgroundDrawable(null);
 
         mSuggestionsStrip = (ViewGroup)findViewById(R.id.suggestions_strip);
-        WordPredictionAdapter.setSuggestionsViewGroup(mSuggestionsStrip);
         for (int pos = 0; pos < MAX_SUGGESTIONS; pos++) {
             final TextView word = (TextView)inflater.inflate(R.layout.suggestion_word, null);
             word.setTag(pos);

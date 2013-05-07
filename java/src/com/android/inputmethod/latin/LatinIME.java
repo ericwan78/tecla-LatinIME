@@ -149,7 +149,7 @@ public class LatinIME extends com.android.tecla.keyboard.TeclaIME /*InputMethodS
     private View mExtractArea;
     private View mKeyPreviewBackingView;
     private View mSuggestionsContainer;
-    private SuggestionsView mSuggestionsView;
+    public SuggestionsView mSuggestionsView;
     /* package for tests */ Suggest mSuggest;
     private CompletionInfo[] mApplicationSpecifiedCompletions;
     private ApplicationInfo mTargetApplicationInfo;
